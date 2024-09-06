@@ -405,7 +405,7 @@ def create_gaussian_diffusion(
     if not timestep_respacing:
         timestep_respacing = [steps]
     return SpacedDiffusion(
-        use_timesteps=space_timesteps(steps, timestep_respacing),
+        use_timesteps=space_timesteps(steps, timestep_respacing), # 有必要这么复杂吗，操了
         betas=betas,
         model_mean_type=(
             gd.ModelMeanType.EPSILON if not predict_xstart else gd.ModelMeanType.START_X

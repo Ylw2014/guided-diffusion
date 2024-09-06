@@ -13,7 +13,7 @@ import torch as th
 
 from .nn import mean_flat
 from .losses import normal_kl, discretized_gaussian_log_likelihood
-
+from ipdb import set_trace
 
 def get_named_beta_schedule(schedule_name, num_diffusion_timesteps):
     """
@@ -257,6 +257,8 @@ class GaussianDiffusion:
 
         B, C = x.shape[:2]
         assert t.shape == (B,)
+        from ipdb import set_trace
+        # set_trace()
         model_output = model(x, self._scale_timesteps(t), **model_kwargs)
 
         if self.model_var_type in [ModelVarType.LEARNED, ModelVarType.LEARNED_RANGE]:
@@ -429,7 +431,7 @@ class GaussianDiffusion:
         )
         noise = th.randn_like(x)
         nonzero_mask = (
-            (t != 0).float().view(-1, *([1] * (len(x.shape) - 1)))
+            (t != 0).float().view(-1, *([1] * (len(x.shape) - 1))) # 草泥马  [batch,1,1,1] 
         )  # no noise when t == 0
         if cond_fn is not None:
             out["mean"] = self.condition_mean(
@@ -511,7 +513,7 @@ class GaussianDiffusion:
             img = noise
         else:
             img = th.randn(*shape, device=device)
-        indices = list(range(self.num_timesteps))[::-1]
+        indices = list(range(self.num_timesteps))[::-1]  # 倒叙从249 到0 
 
         if progress:
             # Lazy import so that we don't depend on tqdm.
@@ -520,7 +522,7 @@ class GaussianDiffusion:
             indices = tqdm(indices)
 
         for i in indices:
-            t = th.tensor([i] * shape[0], device=device)
+            t = th.tensor([i] * shape[0], device=device)  # 时间步， batch 个 [t,t,t,... ]
             with th.no_grad():
                 out = self.p_sample(
                     model,
@@ -533,6 +535,7 @@ class GaussianDiffusion:
                 )
                 yield out
                 img = out["sample"]
+                print(i, img.max().item(),img.min().item(),img.mean().item(),img.std().item())
 
     def ddim_sample(
         self,

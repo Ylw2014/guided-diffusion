@@ -1,0 +1,208 @@
+{
+    "algorithmicOutput": [
+      {
+        "componentHeader": {
+          "FPS_EventMask": 4,
+          "id": 0,
+          "jsonActive": "Active",
+          "name": "MULTI_PREPROCESSING",
+          "nodeActive": "Active",
+          "nodeStatus": "Active"
+        }
+      },
+      {
+        "componentHeader": {
+          "FPS_EventMask": 4,
+          "id": 2,
+          "jsonActive": "Active",
+          "name": "MANUAL_DISTACTION",
+          "nodeActive": "Active",
+          "nodeStatus": "Active"
+        },
+        "dadInferResults": [
+          {
+            "confidence": 0.20768636465072632,
+            "inferClassID": "E_CLASS_OTHER_ACTIVITY",
+            "seatPostion": "E_SEATPOS_FRONT_LEFT"
+          }
+        ],
+        "dadWarningInfos": [
+          {
+            "dadWarningStatus": "E_DAD_NO_WARNING",
+            "seatPostion": "E_SEATPOS_FRONT_LEFT"
+          }
+        ],
+        "hoswInferResults": [
+          {
+            "confidence": 0.9925260543823242,
+            "inferClassID": "E_CLASS_HANDS_OFF",
+            "seatPostion": "E_SEATPOS_FRONT_LEFT"
+          }
+        ],
+        "hoswWarningInfos": [
+          {
+            "hoswWarningStatus": "E_HOSW_WARNING_NO_WARNING",
+            "seatPostion": "E_SEATPOS_FRONT_LEFT"
+          }
+        ]
+      },
+      {
+        "SBDResultInfo": [
+          {
+            "SeatBeltDetectionInfo": {
+              "SeatBeltStatus": "E_SEAT_BELT_FASTENED",
+              "confidence": 0.0
+            },
+            "SeatPosition": "E_SEATPOS_FRONT_LEFT"
+          },
+          {
+            "SeatBeltDetectionInfo": {
+              "SeatBeltStatus": "E_SEAT_BELT_UNFASTENED",
+              "confidence": 0.0
+            },
+            "SeatPosition": "E_SEATPOS_FRONT_RIGHT"
+          }
+        ],
+        "SBDWarningInfo": [
+          {
+            "SeatBeltWarning": "E_SEAT_BELT_WARNING_OFF",
+            "SeatPosition": "E_SEATPOS_FRONT_LEFT"
+          },
+          {
+            "SeatBeltWarning": "E_SEAT_BELT_WARNING_ON",
+            "SeatPosition": "E_SEATPOS_FRONT_RIGHT"
+          }
+        ],
+        "componentHeader": {
+          "FPS_EventMask": 4,
+          "id": 1,
+          "jsonActive": "Active",
+          "name": "SBD_DETECTION",
+          "nodeActive": "Active",
+          "nodeStatus": "Active"
+        }
+      }
+    ],
+    "frame": {
+      "frameNo": 23,
+      "frameSize": {
+        "height": 1984,
+        "width": 2560
+      },
+      "inputVideoName": "all_OMS_features.avi",
+      "streamId": 5,
+      "timestamp": 1569614468606,
+      "timestampUnit": "microseconds"
+    },
+    "pipeline": {
+      "graphDesc": "OmsCabinFeaturesGraph",
+      "graphID": "2",
+      "pipelineDesc": "OMS",
+      "pipelineID": "1"
+    }
+  }
+
+{
+    "algorithmicOutput": [
+      {
+        "componentHeader": {
+          "FPS_EventMask": 4,
+          "id": 0,
+          "jsonActive": "Active",
+          "name": "MULTI_PREPROCESSING",
+          "nodeActive": "Active",
+          "nodeStatus": "Active"
+        }
+      },
+      {
+        "componentHeader": {
+          "FPS_EventMask": 4,
+          "id": 2,
+          "jsonActive": "Active",
+          "name": "MANUAL_DISTACTION",
+          "nodeActive": "Active",
+          "nodeStatus": "Active"
+        },
+        "dadInferResults": [
+          {
+            "confidence": 0.20768636465072632,
+            "inferClassID": "E_CLASS_OTHER_ACTIVITY",
+            "seatPostion": "E_SEATPOS_FRONT_LEFT"
+          }
+        ],
+        "dadWarningInfos": [
+          {
+            "dadWarningStatus": "E_DAD_NO_WARNING",
+            "seatPostion": "E_SEATPOS_FRONT_LEFT"
+          }
+        ],
+        "hoswInferResults": [
+          {
+            "confidence": 0.9925260543823242,
+            "inferClassID": "E_CLASS_HANDS_OFF",
+            "seatPostion": "E_SEATPOS_FRONT_LEFT"
+          }
+        ],
+        "hoswWarningInfos": [
+          {
+            "hoswWarningStatus": "E_HOSW_WARNING_NO_WARNING",
+            "seatPostion": "E_SEATPOS_FRONT_LEFT"
+          }
+        ]
+      },
+      {
+        "SBDResultInfo": [
+          {
+            "SeatBeltDetectionInfo": {
+              "SeatBeltStatus": "E_SEAT_BELT_FASTENED",
+              "confidence": 0.0
+            },
+            "SeatPosition": "E_SEATPOS_FRONT_LEFT"
+          },
+          {
+            "SeatBeltDetectionInfo": {
+              "SeatBeltStatus": "E_SEAT_BELT_UNFASTENED",
+              "confidence": 0.0
+            },
+            "SeatPosition": "E_SEATPOS_FRONT_RIGHT"
+          }
+        ],
+        "SBDWarningInfo": [
+          {
+            "SeatBeltWarning": "E_SEAT_BELT_WARNING_OFF",
+            "SeatPosition": "E_SEATPOS_FRONT_LEFT"
+          },
+          {
+            "SeatBeltWarning": "E_SEAT_BELT_WARNING_ON",
+            "SeatPosition": "E_SEATPOS_FRONT_RIGHT"
+          }
+        ],
+        "componentHeader": {
+          "FPS_EventMask": 4,
+          "id": 1,
+          "jsonActive": "Active",
+          "name": "SBD_DETECTION",
+          "nodeActive": "Active",
+          "nodeStatus": "Active"
+        }
+      }
+    ],
+    "frame": {
+      "frameNo": 23,
+      "frameSize": {
+        "height": 1984,
+        "width": 2560
+      },
+      "inputVideoName": "all_OMS_features.avi",
+      "streamId": 5,
+      "timestamp": 1569614468606,
+      "timestampUnit": "microseconds"
+    },
+    "pipeline": {
+      "graphDesc": "OmsCabinFeaturesGraph",
+      "graphID": "2",
+      "pipelineDesc": "OMS",
+      "pipelineID": "1"
+    }
+  }
+  

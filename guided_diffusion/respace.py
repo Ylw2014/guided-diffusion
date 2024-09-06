@@ -79,7 +79,7 @@ class SpacedDiffusion(GaussianDiffusion):
         new_betas = []
         for i, alpha_cumprod in enumerate(base_diffusion.alphas_cumprod):
             if i in self.use_timesteps:
-                new_betas.append(1 - alpha_cumprod / last_alpha_cumprod)
+                new_betas.append(1 - alpha_cumprod / last_alpha_cumprod) # 脑子有泡吧，
                 last_alpha_cumprod = alpha_cumprod
                 self.timestep_map.append(i)
         kwargs["betas"] = np.array(new_betas)

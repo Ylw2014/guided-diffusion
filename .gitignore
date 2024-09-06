@@ -1,3 +1,9 @@
 .DS_Store
 __pycache__/
 classify_image_graph_def.pb
+.ipynb_checkpoints/
+.virtual_documents/
+.vscode/
+guided_diffusion.egg-info/
+models/
+
